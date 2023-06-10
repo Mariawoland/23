@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: calibri;
+            flex-direction: column;
+            gap: 30px;
+            font-size: 25px;
+            text-align: center;
+            color: white;
+            background-color: gray;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            color: white;
+            background-color: gray;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p style="padding-top:20px">[1, 67, 34, 56, 55, 10, 7, 30, 20]</p>
+
+    <p>ღილაკზე დაჭერისას მასივიდსან დაიბეჭდება<br> მხოლოდ ის რიცხვი რომელიც უნაშთოდ იყოფა 5-ზე
+    </p>
+
+    <button onclick="dawere()">დააჭირე</button>
+
+    <p id="ciprebi"></p>
+
+    <script>
+
+        function dawere() {
+
+            var ricxvebi = [1, 67, 34, 56, 55, 10, 7, 30, 20];
+
+            var chasaweri = "";
+
+            for (var i = 0; i < ricxvebi.length; i++) {
+                if (ricxvebi[i] % 5 == 0) {
+
+                    chasaweri += ricxvebi[i] + '<span style="color: transparent;">__</span>';
+                }
+            }
+            document.getElementById("ciprebi").innerHTML = chasaweri;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
